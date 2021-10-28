@@ -1,0 +1,20 @@
+/*@charset "ISO-8859-1";*/
+body {
+    background: url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    /*background-size: 100%;*/
+}
+h1, h2, h3, h4, h5, h6, a {
+    margin:0; padding:0;
+}
+.bienvenidoHeader {
+    margin:0 auto;
+    max-width:500px;
+    color:#fff;
+    text-align:center;
+    font-size:300%;
+}
+.bienvenidoHeader h1 {
+    text-shadow: 0px 5px 15px #444; 
+}
