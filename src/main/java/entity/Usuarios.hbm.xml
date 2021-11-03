@@ -1,43 +1,54 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 28 oct 2021 13:58:07 by Hibernate Tools 5.5.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="tienda_online" dynamic-insert="false" dynamic-update="false" mutable="true" name="Usuarios" optimistic-lock="none" polymorphism="implicit" select-before-update="false" table="usuarios">
-        <id name="id" type="java.lang.Integer">
-            <column name="id"/>
-            <generator class="identity"/>
-        </id>
-        <many-to-one class="Roles" embed-xml="true" fetch="select" insert="true" name="roles" not-found="exception" optimistic-lock="true" unique="false" update="true">
-            <column name="id_rol"/>
-        </many-to-one>
-        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
-            <column name="email"/>
-        </property>
-        <property generated="never" lazy="false" name="clave" optimistic-lock="true" type="string" unique="false">
-            <column name="clave"/>
-        </property>
-        <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
-            <column name="nombre"/>
-        </property>
-        <property generated="never" lazy="false" name="apellido1" optimistic-lock="true" type="string" unique="false">
-            <column name="apellido1"/>
-        </property>
-        <property generated="never" lazy="false" name="apellido2" optimistic-lock="true" type="string" unique="false">
-            <column name="apellido2"/>
-        </property>
-        <property generated="never" lazy="false" name="direccion" optimistic-lock="true" type="string" unique="false">
-            <column name="direccion"/>
-        </property>
-        <property generated="never" lazy="false" name="localidad" optimistic-lock="true" type="string" unique="false">
-            <column name="localidad"/>
-        </property>
-        <property generated="never" lazy="false" name="provincia" optimistic-lock="true" type="string" unique="false">
-            <column name="provincia"/>
-        </property>
-        <property generated="never" lazy="false" name="telefono" optimistic-lock="true" type="string" unique="false">
-            <column name="telefono"/>
-        </property>
-        <property generated="never" lazy="false" name="dni" optimistic-lock="true" type="string" unique="false">
-            <column name="dni"/>
-        </property>
-    </class>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28 oct 2021 13:58:07 by Hibernate Tools 5.5.7.Final -->
+
+<!-- MODIFICACION ERRONEA
+
+<hibernate-mapping default-access="field" default-lazy="false">
+ <class catalog="tienda_online" name="entity.Usuarios" optimistic-lock="none" table="usuarios">
+-->
+
+<hibernate-mapping auto-import="false" default-access="field">
+ <class dynamic-insert="true" name="entity.Usuarios"
+  optimistic-lock="none" table="usuarios">
+ 
+  <id name="id" type="java.lang.Integer">
+   <column name="id"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="idRol" type="integer">
+   <column name="id_rol"/>
+  </property>
+  <property generated="never" lazy="false" name="email" type="string">
+   <column name="email"/>
+  </property>
+  <property generated="never" lazy="false" name="clave" type="string">
+   <column name="clave"/>
+  </property>
+  <property generated="never" lazy="false" name="nombre" type="string">
+   <column name="nombre"/>
+  </property>
+  <property generated="never" lazy="false" name="apellido1" type="string">
+   <column name="apellido1"/>
+  </property>
+  <property generated="never" lazy="false" name="apellido2" type="string">
+   <column name="apellido2"/>
+  </property>
+  <property generated="never" lazy="false" name="direccion" type="string">
+   <column name="direccion"/>
+  </property>
+  <property generated="never" lazy="false" name="localidad" type="string">
+   <column name="localidad"/>
+  </property>
+  <property generated="never" lazy="false" name="provincia" type="string">
+   <column name="provincia"/>
+  </property>
+  <property generated="never" lazy="false" name="telefono" type="string">
+   <column name="telefono"/>
+  </property>
+  <property generated="never" lazy="false" name="dni" type="string">
+   <column name="dni"/>
+  </property>
+ </class>
 </hibernate-mapping>

@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 28 oct 2021 13:58:07 by Hibernate Tools 5.5.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="tienda_online" dynamic-insert="false" dynamic-update="false" mutable="true" name="Roles" optimistic-lock="none" polymorphism="implicit" select-before-update="false" table="roles">
-        <id name="id" type="java.lang.Integer">
-            <column name="id"/>
-            <generator class="identity"/>
-        </id>
-        <property generated="never" lazy="false" name="rol" optimistic-lock="true" type="string" unique="false">
-            <column name="rol"/>
-        </property>
-        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="usuarioses" optimistic-lock="true" sort="unsorted" table="usuarios">
-            <key on-delete="noaction">
-                <column name="id_rol"/>
-            </key>
-            <one-to-many class="Usuarios" embed-xml="true" not-found="exception"/>
-        </set>
-    </class>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28 oct 2021 13:58:07 by Hibernate Tools 5.5.7.Final -->
+<hibernate-mapping default-access="field" default-lazy="false">
+ <class catalog="tienda_online" name="entity.Roles" optimistic-lock="none" table="roles">
+  
+  <id name="id" type="java.lang.Integer">
+   <column name="id"/>
+   <generator class="identity"/>
+  </id>
+  
+  <property generated="never" lazy="false" name="rol" type="string">
+   <column name="rol"/>
+  </property>
+  
+ </class>
 </hibernate-mapping>

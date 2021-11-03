@@ -30,7 +30,7 @@ public class UsuariosDAO {
 	
 	public static List<Usuarios> getAllUsuarios(Session s) {
 		//String hQuery = "from Usuarios"; // Sin ordenar
-		String hQuery = "from Usuarios order by codigo";
+		String hQuery = "from Usuarios";
 		List<Usuarios> usuariosList = s.createQuery(hQuery, Usuarios.class).list();
 				   	   			           
 		return usuariosList;
